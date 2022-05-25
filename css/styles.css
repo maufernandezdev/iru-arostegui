@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F9F5F1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 128px 20px 16px 20px;
+  gap: 256px;
+  position: absolute;
+  width: 375px;
+  height: 4879px;
+  left: 0px;
+  top: 0px;
+}
+.content .intro h1 {
+  /* Title */
+  width: 135px;
+  height: 24px;
+  width: 100%;
+  /* CV & Cover letter/Title */
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 24px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  /* Black */
+  color: #323232;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 0.7em;
+}
+.content .intro .description {
+  width: 343px;
+  height: 72px;
+  /* Desktop/Text */
+  font-family: "Baskervville", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  letter-spacing: 0.02em;
+  /* Black */
+  color: #323232;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-bottom: 0.7em;
+}
+.content .intro .description span {
+  color: #efb810;
+  color: #B8920C;
+}
+.content .intro img {
+  width: 343px;
+  width: 100%;
+  border-radius: 4px;
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-bottom: 0.7em;
+}
+.content .intro .buttons {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 350px;
+  height: 88px;
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+.content .intro .buttons .secondary {
+  /* Button Secondary */
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 45px;
+  gap: 10px;
+  width: 350px;
+  height: 56px;
+  /* Black */
+  background: #323232;
+  border-radius: 4px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  /* [MRF 2022-05-24] comment styles */
+  color: #F9F5F1;
+  text-decoration: none;
+  /* Desktop/Subtitle */
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+}
+.content .intro .buttons .link {
+  /* Text */
+  width: 350px;
+  height: 16px;
+  width: 100%;
+  /* Desktop/Link */
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  /* Black */
+  color: #323232;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
