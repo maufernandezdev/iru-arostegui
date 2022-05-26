@@ -12,6 +12,7 @@ body {
 :root {
   --margin-bottom: 1em;
   --font-brandon--black: "Brandon Grotesque Black", sans-serif;
+  --padding-section:0px 20px;
 }
 
 /* start [MRF 2022-05-25] global styles */
@@ -35,6 +36,41 @@ body {
   flex-grow: 0;
   /* [MRF 2022-05-24] comment styles */
   color: #F9F5F1;
+  text-decoration: none;
+  /* Desktop/Subtitle */
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+}
+
+.primary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 45px;
+  gap: 10px;
+  width: 100%;
+  /* [MRF 2022-05-24] width to 100% */
+  height: 56px;
+  /* Black */
+  border: 2px solid #323232;
+  color: #323232;
+  border-radius: 4px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  /* [MRF 2022-05-24] comment styles */
   text-decoration: none;
   /* Desktop/Subtitle */
   font-family: "Brandon Grotesque Black", sans-serif;
@@ -81,16 +117,18 @@ p span {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 128px 20px 16px 20px;
+  padding: 128px 0px 16px 0px;
   height: auto;
   position: absolute;
   width: 100%;
   /* [MRF 2022-05-24] width to 100% */
   left: 0px;
   top: 0px;
+  overflow-x: hidden;
 }
 .content .intro {
-  max-width: 375px;
+  max-width: 400px;
+  padding: var(--padding-section);
 }
 .content .intro h1 {
   /* Title */
@@ -178,12 +216,10 @@ p span {
   align-items: center;
   padding: 256px 0px 256px 0px;
   max-width: 375px;
+  max-width: 400px;
   width: 100%;
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+  /* [MRF 2022-05-26] carousel styles */
+  /* [MRF 2022-05-26] ui challenge */
 }
 .content .designs h2 {
   /* Title */
@@ -211,6 +247,10 @@ p span {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+.content .designs .description {
+  padding: var(--padding-section);
+  max-width: 400px;
 }
 .content .designs .description h3 {
   width: 100%;
@@ -304,6 +344,171 @@ p span {
   position: absolute;
   background-color: #323232;
   left: 10.5rem;
+}
+.content .designs .description .case-studies-paragraph {
+  margin-bottom: 32px;
+}
+.content .designs #carousel-design {
+  padding: var(--padding-section);
+}
+.content .designs #carousel-design .carousel-control-next i {
+  position: relative;
+  color: #323232;
+  font-size: 3.5rem;
+  top: -15rem;
+}
+.content .designs #carousel-design .carousel-control-next {
+  right: 0.5rem;
+}
+.content .designs #carousel-design .humand-paragraph,
+.content .designs #carousel-design .crossfit-paragraph {
+  height: 220px;
+}
+.content .designs #carousel-design .carousel-inner img {
+  height: 260px;
+}
+.content .designs #carousel-design .carousel-inner .logo-slider {
+  width: 100%;
+  height: 58px;
+  margin-bottom: var(--margin-bottom);
+}
+.content .designs #carousel-design .carousel-inner .primary {
+  margin-bottom: 128px;
+}
+.content .designs #carousel-design .carousel-inner .primary img {
+  width: 40px;
+  height: 40px;
+}
+.content .designs .ui-challenge {
+  max-width: 400px;
+  background-color: #323232;
+  padding: var(--padding-section);
+}
+.content .designs .ui-challenge .ui-challenge-title {
+  width: 100%;
+  height: 16px;
+  margin-top: 64px;
+  /* Desktop/Link */
+  font-family: var(--font-brandon--black);
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  /* Black */
+  color: #F9F5F1;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: var(--margin-bottom);
+}
+.content .designs .ui-challenge .ui-challenge-title::after {
+  content: "";
+  width: 205px;
+  height: 1px;
+  position: absolute;
+  background-color: #F9F5F1;
+  left: 10.5rem;
+}
+.content .designs .ui-challenge p {
+  color: #F9F5F1;
+}
+.content .designs .ui-challenge img {
+  width: 350px;
+  width: 100%;
+  height: 144px;
+  margin-bottom: 10px;
+}
+.content .designs .ui-challenge .primary {
+  border: 2px solid #F9F5F1;
+  color: #F9F5F1;
+  margin-bottom: 64px;
+}
+.content .designs .ui-challenge .primary img {
+  width: 40px;
+  height: 40px;
+}
+.content .u-nerd {
+  padding: var(--padding-section);
+  margin-bottom: 256px;
+}
+.content .u-nerd img {
+  margin: 0px auto;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--margin-bottom);
+}
+.content .u-nerd p {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.content .u-nerd .container-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.content .u-nerd .container-buttons .primary,
+.content .u-nerd .container-buttons .secondary {
+  width: 260px;
+  padding: 0;
+}
+.content .u-nerd .container-buttons .primary {
+  margin-bottom: 8px;
+}
+.content footer {
+  padding: var(--padding-section);
+  max-width: 400px;
+  width: 100%;
+}
+.content footer .container-links {
+  margin-bottom: 64px;
+  height: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.content footer .container-links a {
+  font-family: "Baskervville", serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-decoration: none;
+  color: #323232;
+}
+.content footer .container-links a img {
+  line-height: 31.2px;
+  line-height: 130%;
+  margin-top: -0.5rem;
+}
+.content footer hr {
+  width: 100%;
+  height: 2px;
+  color: #323232;
+  margin-bottom: 64px;
+}
+.content footer .ellipses-container {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content footer .ellipses-container .ellipse {
+  border: 1px solid #323232;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 9.8px;
 }
 
 /*# sourceMappingURL=styles.css.map */
