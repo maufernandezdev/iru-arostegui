@@ -8,28 +8,60 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    
+
+    <!----===== favicon ===== -->
+    <!-- <link rel="icon" type="text/css" href="images/Logo.ico"> -->
+  
     <!----======== Start Fonts ======== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.cdnfonts.com/css/brandon-grotesque-regular" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
     <!----======== End Fonts ======== -->
+
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
      <!-- jQuery, fontawsome, gsap-->
      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <!-- Link Swiper's CSS -->
 
     <title>Iru Arostegui</title>
 </head>
 <body>
+    <!----======== Header ======== -->
+    <header id="header">
+      <nav class="menu">
+          <div class="logo">
+            <a href="#" class="btn-menu" id="btn-menu">
+              <i class='icono bx bx-menu'></i>
+            </a>
+            <img src="images/Logo.png" alt="logo">
+          </div>
+          <div class="enlaces" id="enlaces">
+
+              <a href="#who-iam">Who am i?</a>
+              <a href="#work">My work</a>
+              <a href="#u-nerd">u nerd</a>
+              <a href="mailto:iru.arostegui@gmail.com">Contact</a>
+
+              <div class="social-media-container">
+                  <a href="#" target="_blank"><img src="images/twitter-light.svg"  alt="twitter"></a>
+                  <a href="#" target="_blank"><img src="images/dribbble-light.svg" alt="dribble"></a>
+                  <a href="#" target="_blank"><img src="images/linkedin-light.svg" alt="linkedin"></a>
+                  <a href="#" target="_blank"><img src="images/behance-light.svg"  alt="behance"></a>
+                  <a href="#" target="_blank"><img src="images/medium-Light.svg"   alt="medium"></a>
+              </div>
+
+          </div>
+      </nav>
+    </header>
 
     <!----======== content ======== -->
     <section class="content">
-        <section class="intro">
+        <!----======== intro ======== -->
+        <section class="intro" id="who-iam">
             <h1>HI THERE!</h1>
             <p>
                 My name is <span>Iru</span> and I'm a <span>UI nerd</span> who loves <span>Design Systems</span> that allow designers and Devs to focus on their <span>work seamlessly</span>.
@@ -40,12 +72,14 @@
                 <a href="#" class="link">want more detail?</a>
             </div>
         </section>
-        <section class="designs">
+
+        <!----======== designs ======== -->
+        <section class="designs" id="work">
             <h2>my designs</h2>
             <div class="description">
                 <h3>Profesional work</h3>
                 <p>Almost all my work is under a Non-disclosure agreement, so I can't show it here. Let's <span>get in touch</span>, and maybe I can walk you through some of it.</p>
-                <a href="#" class="secondary">contact me</a>
+                <a href="mailto:iru.arostegui@gmail.com" class="secondary">contact me</a>
                 <p class="detail">You can also visit some of the <span>websites</span> that I designed and are <span>online</span>.</p>
                 <div class="content-icon">↓</div>
                 <div class="website">
@@ -109,9 +143,10 @@
               </a>
           </div>
 
-        </section> 
-         
-        <section class="u-nerd">
+        </section>
+
+        <!----======== u-nerd ======== -->
+        <section class="u-nerd" id="u-nerd">
           <img src="images/Image--Unerd.png" alt="unerd">
           <p>U nerd is an <span>educational community</span> which I <span>co-found</span> with Ariel Greco.
              The initial idea was to create and co create with everyone and share <span>Spanish quality content</span>.</p>
@@ -120,13 +155,15 @@
                <a href="#" class="secondary">visit u nerd’s website</a>
              </div>
         </section>
+        
+        <!----======== footer ======== -->
         <footer>
           <div class="container-links">
-            <a href="#">Who am I?</a>
-            <a href="#">My Work</a>
+            <a href="#who-iam">Who am I?</a>
+            <a href="#work">My Work</a>
             <a href="index.html"><img src="images/Logo.png" alt="logo"></a>
-            <a href="#">U nerd</a>
-            <a href="#">Contact</a>
+            <a href="#u-nerd">U nerd</a>
+            <a href="mailto:iru.arostegui@gmail.com">Contact</a>
           </div>
           <hr>
           <div class="ellipses-container">
@@ -150,6 +187,49 @@
   // $('.carousel').carousel({
   //     interval: 5000
   // })
+</script>
+<script>
+  $(function(){
+
+  let header = document.getElementById( 'header' );
+  //menu responsive
+  //calcular ancho
+  let ancho = $( window ).width(),
+      enlaces = $( '#enlaces' ),
+      btnMenu = $( '#btn-menu' ),
+      icono = $( '#btn-menu .icono' );
+
+    if (ancho < 780)
+    {
+        enlaces.hide();
+        // icono.addClass( 'fa-bars' );
+        icono.addClass( 'bx-menu' );
+        enlaces.on( 'click', function( e ) {
+            enlaces.slideToggle( "slow" );
+            icono.toggleClass( 'bx-menu' );
+            icono.toggleClass( 'bx-x' );
+        });
+    }
+    btnMenu.on( 'click', function( e ) {
+        enlaces.slideToggle( "slow" );
+        icono.toggleClass( 'bx-menu' );
+        icono.toggleClass( 'bx-x' );
+    });
+
+    $( window ).on( 'resize', function() {
+        if ( $( this ).width() > 780 ) {
+            enlaces.show();
+            icono.addClass( 'bx-x' );
+            icono.removeClass( 'bx-menu' );
+
+        } else {
+            enlaces.hide();
+            icono.addClass( 'bx-menu' );
+            icono.removeClass( 'bx-x' );
+        }
+
+    });
+  });
 </script>
 </body>
 </html>

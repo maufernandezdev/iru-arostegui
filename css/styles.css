@@ -9,10 +9,12 @@ body {
   background: #F9F5F1;
 }
 
+/* [MRF 2022-05-26] brandon family */
 :root {
   --margin-bottom: 1em;
   --font-brandon--black: "Brandon Grotesque Black", sans-serif;
-  --padding-section:0px 20px;
+  --font-brandon--light: "Brandon Grotesque Light", sans-serif;
+  --padding-section: 0px 20px;
 }
 
 /* start [MRF 2022-05-25] global styles */
@@ -25,20 +27,14 @@ body {
   padding: 22px 45px;
   gap: 10px;
   width: 100%;
-  /* [MRF 2022-05-24] width to 100% */
   height: 56px;
-  /* Black */
   background: #323232;
   border-radius: 4px;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   /* [MRF 2022-05-24] comment styles */
   color: #F9F5F1;
   text-decoration: none;
   /* Desktop/Subtitle */
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: var(--font-brandon--black);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -52,6 +48,7 @@ body {
   font-feature-settings: "liga" off;
 }
 
+/* [2022-05-25] primary button */
 .primary {
   display: flex;
   flex-direction: row;
@@ -62,18 +59,13 @@ body {
   width: 100%;
   /* [MRF 2022-05-24] width to 100% */
   height: 56px;
-  /* Black */
+  text-decoration: none;
   border: 2px solid #323232;
   color: #323232;
   border-radius: 4px;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   /* [MRF 2022-05-24] comment styles */
-  text-decoration: none;
   /* Desktop/Subtitle */
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: var(--font-brandon--black);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -87,9 +79,11 @@ body {
   font-feature-settings: "liga" off;
 }
 
+/* [2022-05-25] paragraph */
 p {
   width: 100%;
   /* [MRF 2022-05-24] width to 100% */
+  margin-bottom: var(--margin-bottom);
   /* Desktop/Text */
   font-family: "Baskervville", serif;
   font-style: normal;
@@ -98,17 +92,106 @@ p {
   line-height: 150%;
   /* or 24px */
   letter-spacing: 0.02em;
-  /* Black */
   color: #323232;
   /* Inside auto layout */
   flex: none;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
-  margin-bottom: 1em;
 }
 p span {
   color: #B8920C;
+}
+
+/* Start [MRF 2022-05-26] header */
+#header {
+  background-color: transparent;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  padding: 0em;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+#header .menu {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#header .menu .logo {
+  padding: 0em 0.7em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  height: 64px;
+  background-color: #F9F5F1;
+}
+#header .menu .logo .btn-menu {
+  text-decoration: none;
+  align-self: center;
+  margin-right: 10px;
+  width: 42px;
+  height: 42px;
+}
+#header .menu .logo .btn-menu i {
+  font-size: 2.3rem;
+  color: #323232;
+  position: relative;
+  top: 2.5px;
+  left: 2.4px;
+}
+#header .menu .logo img {
+  width: 40px;
+  height: 20px;
+  margin: 20px 5px;
+}
+
+.menu .enlaces {
+  display: inline-block;
+  text-align: right;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #323232;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 64px;
+  z-index: 5;
+}
+.menu .enlaces a {
+  font-family: var(--font-brandon--light);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 113%;
+  /* identical to box height, or 16px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  /* White */
+  text-decoration: none;
+  color: #F9F5F1;
+  text-align: center;
+  margin: 16px 0px;
+  width: 100%;
+}
+.menu .enlaces .social-media-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0em 3em;
+  margin-top: 428px;
+  margin-bottom: 32px;
 }
 
 /* end [MRF 2022-05-25] global styles */
@@ -145,7 +228,6 @@ p span {
   align-items: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  /* Black */
   color: #323232;
   /* Inside auto layout */
   flex: none;
@@ -168,7 +250,6 @@ p span {
   margin-bottom: 0.7em;
 }
 .content .intro .buttons {
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -188,7 +269,7 @@ p span {
   height: 16px;
   width: 100%;
   /* Desktop/Link */
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: var(--font-brandon--black);
   font-style: normal;
   font-weight: 450;
   font-size: 16px;
@@ -202,7 +283,6 @@ p span {
   text-decoration-line: underline;
   text-transform: uppercase;
   font-feature-settings: "liga" off;
-  /* Black */
   color: #323232;
   /* Inside auto layout */
   flex: none;
@@ -227,8 +307,7 @@ p span {
   height: 33px;
   margin-bottom: 128px;
   /* Desktop/Title */
-  font-family: "Brandon Grotesque";
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: var(--font-brandon--black);
   font-style: normal;
   font-weight: 450;
   font-size: 28px;
@@ -258,8 +337,7 @@ p span {
   margin-bottom: 16px;
   max-width: 375px;
   /* Desktop/Subtitle */
-  font-family: "Brandon Grotesque";
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: var(--font-brandon--black);
   font-style: normal;
   font-weight: 450;
   font-size: 16px;
@@ -270,7 +348,6 @@ p span {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-feature-settings: "liga" off;
-  /* Black */
   color: #323232;
   /* Inside auto layout */
   flex: none;
@@ -317,7 +394,6 @@ p span {
   text-decoration-line: underline;
   text-transform: uppercase;
   font-feature-settings: "liga" off;
-  /* Black */
   color: #323232;
   /* Inside auto layout */
   flex: none;
