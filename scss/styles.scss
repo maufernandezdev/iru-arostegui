@@ -23,7 +23,6 @@ body{
 /*
   1. movil ancho total 375px. padding 16px de cada lado. max width 343 ( sin max width con el padding se hace el espacio en el ancho)
   2. desktop ancho total 1440px padding 0px de cada lado. max width 1100px
-
 */
 
 :root {
@@ -33,6 +32,7 @@ body{
     --font-brandon--black: 'Brandon Grotesque Black', sans-serif;
     --font-brandon--light: 'Brandon Grotesque Light', sans-serif;
     --padding-section: 0px 20px;
+    --transition-bezier: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* start [MRF 2022-05-25] global styles */
@@ -50,10 +50,11 @@ body{
     width: 100%;
     height: 56px;
     background: $black;
+    color: $white;
     border-radius: 4px;
 
     /* [MRF 2022-05-24] comment styles */
-    color: $white;
+    
     text-decoration: none;
 
     /* Desktop/Subtitle */
@@ -70,6 +71,12 @@ body{
     letter-spacing: 0.15em;
     text-transform: uppercase;
     font-feature-settings: 'liga' off;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); /* [MRF 2022-06-02] transition */
+    &:hover{
+      color: $white;
+      /* Sombra */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
 }
 
 /* [2022-05-25] primary button */
@@ -106,13 +113,13 @@ body{
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-feature-settings: 'liga' off;
-
-      @media (min-width: 1366px)
-      {
-
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); /* [MRF 2022-06-02] transition */
+      &:hover{
+        color: $black;
+        /* Sombra */
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
       }
-
-
+      
 }
 
 /* [2022-05-25] paragraph */
@@ -308,8 +315,11 @@ p {
                 margin: 0.3em 1em;
                 // padding: 1em;
                 width: auto;
-                font-family: 'Source Sans Pro', sans-serif;
                 font-family: var(--font-brandon--black);
+                transition: var(--transition-bezier);
+                &:hover{
+                  color: $golden-letter;
+                }
             }
           }
 
@@ -430,6 +440,7 @@ p {
           }
           p{
               height: 72px;
+              height: auto;
           }
           img{
               
@@ -461,11 +472,6 @@ p {
             //width: 350px;
             width: 100%; /* [MRF 2022-05-24] width to 100% */
             height: 88px;
-
-            /* Inside auto layout */
-            flex: none;
-            order: 3;
-            flex-grow: 0;
             
             .link{
                 /* Text */
@@ -491,11 +497,6 @@ p {
                 text-transform: uppercase;
                 font-feature-settings: 'liga' off;
                 color: $black;
-
-                /* Inside auto layout */
-                flex: none;
-                order: 1;
-                flex-grow: 0;
             }
         }
         /* [MRF 2022-05-27] responsive 1366px */
@@ -592,37 +593,38 @@ p {
           .profesional-work {
 
               h3{
-                //width: 197px;
-                width: 100%;
-                height: 16px;
-                margin-bottom: 16px;
-                max-width: 375px;
-                
-    
-                /* Desktop/Subtitle */
-                font-family: var(--font-brandon--black);
-                font-style: normal;
-                font-weight: 450;
-                font-size: 16px;
-                line-height: 100%;
-                /* identical to box height, or 16px */
-                display: flex;
-                align-items: center;
-                letter-spacing: 0.15em;
-                text-transform: uppercase;
-                font-feature-settings: 'liga' off;
-                color: $black;
-                
-                &::after{
-                    content: '';
-                    // width: 123px;
-                    // width: 100%;
-                    width: 138px;
-                    height: 1px;
-                    position: absolute;
-                    background-color: $black;
-                    left: 14.5rem;
+                span{
+                  width: 100%;
+                  width: 230px;
+                  height: 16px;
+                  margin-bottom: 16px;
+
+                  /* Desktop/Subtitle */
+                  font-family: var(--font-brandon--black);
+                  font-style: normal;
+                  font-weight: 450;
+                  font-size: 16px;
+                  line-height: 100%;
+                  /* identical to box height, or 16px */
+                  display: flex;
+                  align-items: center;
+                  letter-spacing: 0.15em;
+                  text-transform: uppercase;
+                  font-feature-settings: 'liga' off;
+                  color: $black;
+
+                    &::after{
+                      content: '';
+                      // width: 123px;
+                      // width: 100%;
+                      width: 100px;
+                      height: 1px;
+                      position: absolute;
+                      background-color: $black;
+                      left: 67%;
+                  }
                 }
+                
             }
 
           }
@@ -743,6 +745,8 @@ p {
           .humand-paragraph,
           .crossfit-paragraph{
             height: 220px;
+            height: 240px;
+            height: auto;
           }
           .carousel-inner{
 
@@ -869,35 +873,34 @@ p {
         
                 span{
                   background-color: $white;
+                  &::after{
+                    content: '';
+                    // width: 123px;
+                    // width: 100%;
+                    width: 0px;
+                    height: 1px;
+                    position: absolute;
+                    background-color: $black;
+                    left: 31.2rem;
+                    left: 36rem;
+                    left: 28rem;
+                    // z-index: -2;
+                  }
+                  &::before{
+                    content: '';
+                    // width: 123px;
+                    // width: 100%;
+                    width: 0px;
+                    height: 1px;
+                    position: absolute;
+                    background-color: $black;
+                    right: 31.2rem;
+                    right: 36rem;
+                    right: 28rem;
+                    z-index: -2;
+                  }
                 }
   
-                &::after{
-                  content: '';
-                  // width: 123px;
-                  // width: 100%;
-                  width: 0px;
-                  height: 1px;
-                  position: absolute;
-                  background-color: $black;
-                  left: 31.2rem;
-                  left: 36rem;
-                  left: 28rem;
-                  // z-index: -2;
-                }
-                &::before{
-                  content: '';
-                  // width: 123px;
-                  // width: 100%;
-                  width: 0px;
-                  height: 1px;
-                  position: absolute;
-                  background-color: $black;
-                  right: 31.2rem;
-                  right: 36rem;
-                  right: 28rem;
-                  z-index: -2;
-                }
-
               }
                 .content-icon{
                   text-align: center;
@@ -1069,8 +1072,9 @@ p {
         flex-wrap: wrap;
         .primary,
         .secondary{
-          width:260px;
-          padding: 0;
+          width:275px;
+          padding: 22px 10px;
+          // padding: 0;
         }
         .primary{
           margin-bottom: 8px;

@@ -21,6 +21,7 @@ body {
   --font-brandon--black: "Brandon Grotesque Black", sans-serif;
   --font-brandon--light: "Brandon Grotesque Light", sans-serif;
   --padding-section: 0px 20px;
+  --transition-bezier: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* start [MRF 2022-05-25] global styles */
@@ -35,9 +36,9 @@ body {
   width: 100%;
   height: 56px;
   background: #323232;
+  color: #F9F5F1;
   border-radius: 4px;
   /* [MRF 2022-05-24] comment styles */
-  color: #F9F5F1;
   text-decoration: none;
   /* Desktop/Subtitle */
   font-family: var(--font-brandon--black);
@@ -52,6 +53,13 @@ body {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-feature-settings: "liga" off;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* [MRF 2022-06-02] transition */
+}
+.secondary:hover {
+  color: #F9F5F1;
+  /* Sombra */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* [2022-05-25] primary button */
@@ -83,7 +91,15 @@ body {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-feature-settings: "liga" off;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* [MRF 2022-06-02] transition */
 }
+.primary:hover {
+  color: #323232;
+  /* Sombra */
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
 /* [2022-05-25] paragraph */
 p {
   width: 100%;
@@ -243,8 +259,11 @@ p span {
     text-align: center;
     margin: 0.3em 1em;
     width: auto;
-    font-family: "Source Sans Pro", sans-serif;
     font-family: var(--font-brandon--black);
+    transition: var(--transition-bezier);
+  }
+  #header .menu .enlaces .enlaces__first-block a:hover {
+    color: #B8920C;
   }
   #header .menu .enlaces .social-media-container {
     display: none;
@@ -335,6 +354,7 @@ p span {
 }
 .content .intro .intro__content p {
   height: 72px;
+  height: auto;
 }
 .content .intro .intro__content img {
   width: 100%;
@@ -359,10 +379,6 @@ p span {
   width: 100%;
   /* [MRF 2022-05-24] width to 100% */
   height: 88px;
-  /* Inside auto layout */
-  flex: none;
-  order: 3;
-  flex-grow: 0;
 }
 .content .intro .buttons .link {
   /* Text */
@@ -385,10 +401,6 @@ p span {
   text-transform: uppercase;
   font-feature-settings: "liga" off;
   color: #323232;
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 @media screen and (min-width: 1366px) {
   .content .intro {
@@ -469,11 +481,11 @@ p span {
   padding: var(--padding-section);
   max-width: 400px;
 }
-.content .designs .description .profesional-work h3 {
+.content .designs .description .profesional-work h3 span {
   width: 100%;
+  width: 230px;
   height: 16px;
   margin-bottom: 16px;
-  max-width: 375px;
   /* Desktop/Subtitle */
   font-family: var(--font-brandon--black);
   font-style: normal;
@@ -488,13 +500,13 @@ p span {
   font-feature-settings: "liga" off;
   color: #323232;
 }
-.content .designs .description .profesional-work h3::after {
+.content .designs .description .profesional-work h3 span::after {
   content: "";
-  width: 138px;
+  width: 100px;
   height: 1px;
   position: absolute;
   background-color: #323232;
-  left: 14.5rem;
+  left: 67%;
 }
 .content .designs .description p {
   height: 96px;
@@ -589,6 +601,8 @@ p span {
 .content .designs #carousel-design .humand-paragraph,
 .content .designs #carousel-design .crossfit-paragraph {
   height: 220px;
+  height: 240px;
+  height: auto;
 }
 .content .designs #carousel-design .carousel-inner img {
   height: 260px;
@@ -687,7 +701,7 @@ p span {
   .content .designs .description .profesional-work h3 span {
     background-color: #F9F5F1;
   }
-  .content .designs .description .profesional-work h3::after {
+  .content .designs .description .profesional-work h3 span::after {
     content: "";
     width: 0px;
     height: 1px;
@@ -697,7 +711,7 @@ p span {
     left: 36rem;
     left: 28rem;
   }
-  .content .designs .description .profesional-work h3::before {
+  .content .designs .description .profesional-work h3 span::before {
     content: "";
     width: 0px;
     height: 1px;
@@ -848,8 +862,8 @@ p span {
 }
 .content .u-nerd .container-buttons .primary,
 .content .u-nerd .container-buttons .secondary {
-  width: 260px;
-  padding: 0;
+  width: 275px;
+  padding: 22px 10px;
 }
 .content .u-nerd .container-buttons .primary {
   margin-bottom: 8px;
