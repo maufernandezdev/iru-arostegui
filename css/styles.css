@@ -14,7 +14,6 @@ body {
 /*
   1. movil ancho total 375px. padding 16px de cada lado. max width 343 ( sin max width con el padding se hace el espacio en el ancho)
   2. desktop ancho total 1440px padding 0px de cada lado. max width 1100px
-
 */
 :root {
   --margin-bottom: 1em;
@@ -155,7 +154,6 @@ p span {
 #header .menu .logo .btn-menu {
   text-decoration: none;
   align-self: center;
-  margin-right: 10px;
   width: 42px;
   height: 42px;
 }
@@ -167,9 +165,10 @@ p span {
   left: 2.4px;
 }
 #header .menu .logo img {
-  width: 50px;
-  height: 25px;
+  width: 40px;
+  height: 20px;
   margin: 20px 5px;
+  margin-left: 10px;
 }
 
 .menu .enlaces {
@@ -481,7 +480,7 @@ p span {
   padding: var(--padding-section);
   max-width: 400px;
 }
-.content .designs .description .profesional-work h3 span {
+.content .designs .description .profesional-work h3 {
   width: 100%;
   width: 230px;
   height: 16px;
@@ -500,13 +499,18 @@ p span {
   font-feature-settings: "liga" off;
   color: #323232;
 }
-.content .designs .description .profesional-work h3 span::after {
+.content .designs .description .profesional-work h3::after {
   content: "";
-  width: 100px;
+  width: 130px;
   height: 1px;
   position: absolute;
   background-color: #323232;
-  left: 67%;
+  left: 60%;
+}
+@media screen and (min-width: 390px) {
+  .content .designs .description .profesional-work h3::after {
+    width: 135px;
+  }
 }
 .content .designs .description p {
   height: 96px;
@@ -553,6 +557,7 @@ p span {
 }
 .content .designs .description .website .aislaciones {
   height: 192px;
+  height: auto;
   margin-bottom: 136px;
 }
 .content .designs .description .case-studies .case-studies-title {
@@ -576,11 +581,16 @@ p span {
 }
 .content .designs .description .case-studies .case-studies-title::after {
   content: "";
-  width: 205px;
+  width: 190px;
   height: 1px;
   position: absolute;
   background-color: #323232;
-  left: 10.5rem;
+  left: 44%;
+}
+@media screen and (min-width: 390px) {
+  .content .designs .description .case-studies .case-studies-title::after {
+    width: 197px;
+  }
 }
 .content .designs .description .case-studies .case-studies-paragraph {
   margin-bottom: 32px;
@@ -649,11 +659,16 @@ p span {
 }
 .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title::after {
   content: "";
-  width: 205px;
+  width: 183px;
   height: 1px;
   position: absolute;
   background-color: #F9F5F1;
-  left: 10.5rem;
+  left: 45.5%;
+}
+@media screen and (min-width: 390px) {
+  .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title::after {
+    width: 192px;
+  }
 }
 .content .designs .ui-challenge .ui-challenge__content .first-block p {
   color: #F9F5F1;
@@ -696,31 +711,30 @@ p span {
   .content .designs .description .profesional-work h3 {
     text-align: center;
     justify-content: center;
-    width: auto;
-  }
-  .content .designs .description .profesional-work h3 span {
+    width: 100%;
     background-color: #F9F5F1;
   }
-  .content .designs .description .profesional-work h3 span::after {
+  .content .designs .description .profesional-work h3::after {
     content: "";
     width: 0px;
+    width: 65px;
     height: 1px;
     position: absolute;
     background-color: #323232;
-    left: 31.2rem;
-    left: 36rem;
-    left: 28rem;
+    left: calc(50% - 175px);
   }
-  .content .designs .description .profesional-work h3 span::before {
+  .content .designs .description .profesional-work h3::before {
     content: "";
     width: 0px;
+    width: 65px;
     height: 1px;
     position: absolute;
     background-color: #323232;
-    right: 31.2rem;
-    right: 36rem;
-    right: 28rem;
-    z-index: -2;
+    right: calc(50% - 175px);
+  }
+  .content .designs .description .profesional-work .first-paragraph {
+    text-align: center;
+    margin: 32px 0px;
   }
   .content .designs .description .profesional-work .content-icon {
     text-align: center;
@@ -752,8 +766,30 @@ p span {
     width: 350px;
     margin: 0px auto;
   }
+  .content .designs .description .case-studies .case-studies-title {
+    justify-content: center;
+  }
   .content .designs .description .case-studies .case-studies-title::after {
+    content: "";
     width: 0px;
+    width: 97px;
+    height: 1px;
+    position: absolute;
+    background-color: #323232;
+    left: 31rem;
+    left: calc(50% - 175px);
+  }
+  .content .designs .description .case-studies .case-studies-title::before {
+    content: "";
+    width: 0px;
+    width: 97px;
+    height: 1px;
+    position: absolute;
+    background-color: #323232;
+    right: calc(50% - 175px);
+  }
+  .content .designs .description .case-studies-paragraph {
+    text-align: center;
   }
   .content .designs #carousel-design {
     display: none;
@@ -819,7 +855,22 @@ p span {
     justify-content: center;
   }
   .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title::after {
-    width: 0;
+    content: "";
+    width: 0px;
+    width: 95px;
+    height: 1px;
+    position: relative;
+    background-color: #F9F5F1;
+    left: 0.5rem;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title::before {
+    content: "";
+    width: 0px;
+    width: 95px;
+    height: 1px;
+    position: relative;
+    background-color: #F9F5F1;
+    right: 0.5rem;
   }
   .content .designs .ui-challenge .ui-challenge__content .first-block p {
     margin: 0;
@@ -887,7 +938,6 @@ p span {
   .content .u-nerd .container-buttons .primary,
 .content .u-nerd .container-buttons .secondary {
     width: 260px;
-    padding: 0;
     margin: 0px 15px;
   }
   .content .u-nerd .container-buttons .primary {
