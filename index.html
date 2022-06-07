@@ -101,7 +101,7 @@
                         In this project, we <span>digitalized all of the processes</span>, so we can say that it is a fisical e-commerce.
                         The idea was to eliminate the queue, you can buy it on any digital device, and the product will be delivered to your house or you can pick up what you bought 15 minutes later.</p>    
                 </div>
-                <div class="website">
+                <div class="website second-child">
                     <h4>Aislaciones Patagonicas</h4>
                     <p class="aislaciones">This company focused on the manufacture of smart materials for construction, being one of the biggest producers in Argentina.
                         In this case, I only worked on the home and products section.
@@ -151,16 +151,19 @@
             <div class="mockups"> 
               <div class="mockup__container">
                 <img class="mockup__img" src="images/Mockup--Humand.png" alt="First slide">
+
                 <div class="mockup__description">
                   <img src="images/humand.png" alt="humand-logo" class="logo-slider">
                       <p class="humand-paragraph">Humand is an <span>Argentinian App</span> that help you create a <span>digital community</span> for your company, not only to connect and give voice to everyone, but also to boost culture, enhance relationships, personal management and more.
                             In these case study, after many hours, I redesign the <span>information architecture</span> and <span>all the UI</span>. For this, I kept in touch all the time with its owners.</p>
                       <a href="https://www.behance.net/iruarostegui" class="primary" target="_blank">look at it! <img src="images/icon--Behance.svg" alt="icon-behance"></a>
                 </div>
+
               </div>
-              <div class="mockup__container">
+              <div class="mockup__container second-child">
                 <img class="mockup__img" src="images/Mockup--Crossfit.png" alt="Second slide">
-                <div class="mockup__description second-child">
+                
+                <div class="mockup__description">
                   <img src="images/crossfit-desktop.png" alt="crossfit-logo" class="logo-slider">
                   <p class="crossfit-paragraph">CrossFit is an <span>international fitness</span> brand that organizes <span>events</span>, competitions and generates a lot of <span>content</span>, but all this through different Apps, Webs, and social media.
                     In this case study, I start from the idea of generating an <span>App</span> that <span>centralizes everything</span>  mentioned above and <span>brings all user closer</span> regardless of their fitness level creating a <span>stronger community.</span></p>
@@ -240,7 +243,7 @@
       btnMenu = $( '#btn-menu' ),
       icono = $( '#btn-menu .icono' );
 
-    if (ancho < 780)
+    if (ancho < 900)
     {
         enlaces.hide();
         // icono.addClass( 'fa-bars' );
@@ -251,6 +254,7 @@
             icono.toggleClass( 'bx-x' );
         });
     }
+
     btnMenu.on( 'click', function( e ) {
         enlaces.slideToggle( "slow" );
         icono.toggleClass( 'bx-menu' );
@@ -259,7 +263,7 @@
 
     $( window ).on( 'resize', function() {
         if ( $( this ).width() > 780 ) {
-            enlaces.show();
+            enlaces.hide();
             icono.addClass( 'bx-x' );
             icono.removeClass( 'bx-menu' );
 
@@ -270,6 +274,8 @@
         }
 
     });
+
+
   });
 </script>
 </body>

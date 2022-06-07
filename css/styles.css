@@ -327,6 +327,7 @@ p span {
 .content .intro {
   max-width: 400px;
   padding: var(--padding-section);
+  /* [MRF 2022-05-27] responsive tablet 767px */
   /* [MRF 2022-05-27] responsive 1366px */
 }
 .content .intro .intro__content h1 {
@@ -401,6 +402,43 @@ p span {
   font-feature-settings: "liga" off;
   color: #323232;
 }
+@media (min-width: 767px) {
+  .content .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 767px;
+    width: 700px;
+    margin: 0px auto;
+    padding: 0;
+  }
+  .content .intro .intro__content {
+    width: 290px;
+    height: 275px;
+  }
+  .content .intro .intro__content h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 115%;
+  }
+  .content .intro .intro__content img {
+    display: none;
+  }
+  .content .intro .img-desktop {
+    display: block;
+    width: 325px;
+    height: 320px;
+  }
+  .content .intro .buttons {
+    gap: 32px;
+  }
+  .content .intro .buttons .link {
+    text-decoration-line: none;
+  }
+}
 @media screen and (min-width: 1366px) {
   .content .intro {
     display: flex;
@@ -448,6 +486,7 @@ p span {
   width: 100%;
   /* [MRF 2022-05-26] carousel styles */
   /* [MRF 2022-05-26] ui challenge */
+  /* [MRF 2022-05-27] responsive tablet 767px */
   /* [MRF 2022-05-27] responsive 1366px */
 }
 .content .designs h2 {
@@ -688,6 +727,238 @@ p span {
   width: 40px;
   height: 40px;
 }
+@media (min-width: 767px) {
+  .content .designs {
+    max-width: 100%;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .content .designs h2 {
+    margin-bottom: 64px;
+  }
+  .content .designs .description {
+    max-width: 100%;
+    width: 700px;
+    padding: 0;
+  }
+  .content .designs .description .profesional-work {
+    width: 350px;
+    margin: 0px auto;
+  }
+  .content .designs .description .profesional-work .secondary {
+    margin-bottom: 64px;
+  }
+  .content .designs .description .profesional-work h3 {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #F9F5F1;
+  }
+  .content .designs .description .profesional-work h3::after {
+    content: "";
+    width: 0px;
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    background-color: #323232;
+    left: calc(50% - 175px);
+  }
+  .content .designs .description .profesional-work h3::before {
+    content: "";
+    width: 0px;
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    background-color: #323232;
+    right: calc(50% - 175px);
+  }
+  .content .designs .description .profesional-work .first-paragraph {
+    text-align: center;
+    margin: 32px 0px;
+  }
+  .content .designs .description .profesional-work .content-icon {
+    text-align: center;
+    height: 24px;
+    font-size: 1.5em;
+    margin-bottom: 64px;
+    line-height: 24px;
+  }
+  .content .designs .description .website-container {
+    display: flex;
+    justify-content: space-between;
+    height: 256px;
+    width: 100%;
+    margin-bottom: 256px;
+  }
+  .content .designs .description .website-container .website {
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+  }
+  .content .designs .description .website-container .website h4 {
+    width: 100%;
+  }
+  .content .designs .description .website-container .website p {
+    width: 330px;
+    height: 215px;
+  }
+  .content .designs .description .website-container .second-child h4, .content .designs .description .website-container .second-child p {
+    text-align: right;
+  }
+  .content .designs .description .website-container .second-child h4 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .content .designs .description .case-studies {
+    width: 350px;
+    margin: 0px auto;
+  }
+  .content .designs .description .case-studies .case-studies-title {
+    justify-content: center;
+  }
+  .content .designs .description .case-studies .case-studies-title::after {
+    content: "";
+    width: 0px;
+    width: 97px;
+    height: 1px;
+    position: absolute;
+    background-color: #323232;
+    left: 31rem;
+    left: calc(50% - 175px);
+  }
+  .content .designs .description .case-studies .case-studies-title::before {
+    content: "";
+    width: 0px;
+    width: 97px;
+    height: 1px;
+    position: absolute;
+    background-color: #323232;
+    right: calc(50% - 175px);
+  }
+  .content .designs .description .case-studies-paragraph {
+    text-align: center;
+  }
+  .content .designs #carousel-design {
+    display: none;
+  }
+  .content .designs .mockups {
+    display: flex;
+    max-width: 700px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  .content .designs .mockups .mockup__container {
+    max-width: 350px;
+  }
+  .content .designs .mockups .mockup__container .mockup__img {
+    width: 100%;
+    width: 550px;
+    margin-left: -12.5rem;
+  }
+  .content .designs .mockups .mockup__container .mockup__description {
+    width: 350px;
+    margin: 0px;
+    margin-bottom: 256px;
+  }
+  .content .designs .mockups .mockup__container .mockup__description .logo-slider {
+    width: 100%;
+    width: 310px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+  .content .designs .mockups .mockup__container .mockup__description p {
+    width: 310px;
+    height: 250px;
+  }
+  .content .designs .mockups .mockup__container .primary {
+    max-width: 310px;
+  }
+  .content .designs .mockups .second-child {
+    margin: 0;
+    text-align: right;
+  }
+  .content .designs .mockups .second-child .mockup__img {
+    margin-left: 0rem;
+  }
+  .content .designs .mockups .second-child .mockup__description {
+    width: 100%;
+  }
+  .content .designs .mockups .second-child .mockup__description .logo-slider {
+    width: auto;
+    height: 60px;
+  }
+  .content .designs .mockups .second-child .mockup__description p {
+    text-align: right;
+    float: right;
+  }
+  .content .designs .mockups .second-child .mockup__description .primary {
+    max-width: 310px;
+    float: right;
+  }
+  .content .designs .ui-challenge {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 4rem;
+  }
+  .content .designs .ui-challenge .ui-challenge__content {
+    max-width: 500px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block {
+    width: 350px;
+    height: auto;
+    margin: 48px 0px;
+    margin: 0px auto;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block .img-title {
+    height: auto;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title {
+    margin: 0;
+    margin-bottom: 16px;
+    justify-content: center;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title::after {
+    content: "";
+    width: 0px;
+    width: 95px;
+    height: 1px;
+    position: relative;
+    background-color: #F9F5F1;
+    left: 0.5rem;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block .ui-challenge-title::before {
+    content: "";
+    width: 0px;
+    width: 95px;
+    height: 1px;
+    position: relative;
+    background-color: #F9F5F1;
+    right: 0.5rem;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .first-block p {
+    margin: 0;
+    height: auto;
+  }
+  .content .designs .ui-challenge .ui-challenge__content img {
+    width: 350px;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .primary {
+    width: 350px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+  .content .designs .ui-challenge .ui-challenge__content .primary img {
+    width: auto;
+    margin-top: 10px;
+  }
+}
 @media screen and (min-width: 1366px) {
   .content .designs {
     max-width: 100%;
@@ -762,6 +1033,14 @@ p span {
     width: 445px;
     height: 168px;
   }
+  .content .designs .description .website-container .second-child h4, .content .designs .description .website-container .second-child p {
+    text-align: left;
+  }
+  .content .designs .description .website-container .second-child h4 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
   .content .designs .description .case-studies {
     width: 350px;
     margin: 0px auto;
@@ -796,33 +1075,56 @@ p span {
   }
   .content .designs .mockups {
     display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  .content .designs .mockups .mockup__container {
+    max-width: 100%;
   }
   .content .designs .mockups .mockup__container .mockup__img {
     width: 100%;
+    margin: 0;
+    max-width: 100%;
     max-width: 705px;
     height: 552px;
+    margin-left: -2em;
   }
   .content .designs .mockups .mockup__container .mockup__description {
     width: 350px;
-    margin: 0px 126px 0px 260px;
+    margin: 0px auto 0px 220px;
     margin-bottom: 256px;
   }
   .content .designs .mockups .mockup__container .mockup__description .logo-slider {
     width: 100%;
-    width: 350px;
+    width: auto;
     height: 60px;
     margin-bottom: 16px;
   }
-  .content .designs .mockups .mockup__container .second-child {
-    margin: 0px 260px 0px 126px;
-    text-align: right;
+  .content .designs .mockups .mockup__container .mockup__description p {
+    width: 100%;
+    max-width: 350px;
   }
-  .content .designs .mockups .mockup__container .second-child .logo-slider {
+  .content .designs .mockups .mockup__container .primary {
+    max-width: 350px;
+  }
+  .content .designs .mockups .second-child .mockup__img {
+    margin: 0;
+    margin-right: -2em;
+  }
+  .content .designs .mockups .second-child .mockup__description {
+    margin: 0;
+    margin: 0px 220px 0px auto;
+  }
+  .content .designs .mockups .second-child .mockup__description .logo-slider {
     width: auto;
     height: 60px;
   }
-  .content .designs .mockups .mockup__container .second-child p {
+  .content .designs .mockups .second-child .mockup__description p {
     text-align: right;
+  }
+  .content .designs .mockups .second-child .mockup__description .primary {
+    max-width: 350px;
   }
   .content .designs .ui-challenge {
     max-width: 100%;
@@ -919,6 +1221,33 @@ p span {
 .content .u-nerd .container-buttons .primary {
   margin-bottom: 8px;
 }
+@media (min-width: 767px) {
+  .content .u-nerd {
+    width: 700px;
+    margin: 0px auto;
+    margin-bottom: 128px;
+  }
+  .content .u-nerd p {
+    text-align: center;
+    width: 350px;
+    margin: 0px auto;
+  }
+  .content .u-nerd .container-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 64px;
+  }
+  .content .u-nerd .container-buttons .primary,
+.content .u-nerd .container-buttons .secondary {
+    width: 260px;
+    margin: 0px 15px;
+  }
+  .content .u-nerd .container-buttons .primary {
+    margin-bottom: 8px;
+  }
+}
 @media screen and (min-width: 1366px) {
   .content .u-nerd {
     width: 1100px;
@@ -989,6 +1318,25 @@ p span {
   height: 40px;
   border-radius: 50%;
   margin-right: 9.8px;
+}
+@media (min-width: 767px) {
+  .content footer {
+    max-width: 700px;
+    margin: 0px auto;
+  }
+  .content footer .container-links {
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 64px;
+  }
+  .content footer .ellipses-container {
+    width: 540px;
+    margin: 0px auto;
+    margin-bottom: 100px;
+  }
+  .content footer .ellipses-container .ellipse {
+    margin-right: 40.8px;
+  }
 }
 @media screen and (min-width: 1366px) {
   .content footer {
