@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <!----===== favicon ===== -->
-    <link rel="icon" type="text/css" href="images/apple-touch-icon-57x57.png"> 
+    <link rel="icon" type="text/css" href="images/iru-logo.ico"> 
 
     <!----======== Meta ======== -->
     <meta name="theme-color" content="#F9F5F1">
@@ -141,9 +141,9 @@
                         <a href="https://www.behance.net/iruarostegui" class="primary" target="_blank">look at it! <img src="images/icon--Behance.svg" alt="icon-behance"></a>
                   </div>
               </div>
-              <!-- <a class="carousel-control-prev" href="#carousel-design" role="button" data-slide="prev">
+              <a class="carousel-control-prev" href="#carousel-design" role="button" data-slide="prev">
                   <i class='bx bx-chevron-left'></i>
-              </a> -->
+              </a>
               <a class="carousel-control-next" href="#carousel-design" role="button" data-slide="next">
                 <i class='bx bx-chevron-right'></i>
                   <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
@@ -231,9 +231,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
 <script>
-  // $('.carousel').carousel({
-  //     interval: 5000
-  // })
+  $('.carousel').carousel({
+      interval: false
+  })
 </script>
 <script>
   $(function(){
@@ -280,6 +280,41 @@
 
 
   });
+
+  const showNext = () =>
+  { 
+    setTimeout( () => {
+
+      $( '.carousel-control-next').css({
+        "display": "block",
+        "top":"22rem"
+      });
+
+      $( '.carousel-control-prev').css({
+        "display": "none",
+      });
+
+    }, 900 );
+  }
+ 
+  const showPrev = () =>
+  { 
+    setTimeout( () => {
+      $( '.carousel-control-next').css({
+        "display": "none",
+      });
+
+      $( '.carousel-control-prev').css({
+        "display": "block",
+      });
+      let prev = document.querySelector('.carousel-control-prev');
+      prev.addEventListener('click', showNext);
+    }, 900 );
+  }
+
+   // carousel-control-prev
+  let next = document.querySelector('.carousel-control-next');
+  next.addEventListener('click', showPrev);
 </script>
 </body>
 </html>

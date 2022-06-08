@@ -760,9 +760,12 @@ p {
         #carousel-design {
           display: block;
           padding: var(--padding-section);
-          
-          .carousel-control-next{
-            
+          .carousel-control-prev{
+            display: none;
+          }
+          .carousel-control-next
+          {
+            right: 0.5rem;
             i{
               position: relative;
               color: $black;
@@ -770,8 +773,15 @@ p {
               top: -15rem;
             }
           }
-          .carousel-control-next{
-            right: 0.5rem;
+
+          .carousel-control-prev
+          {
+            i{
+              position: relative;
+              color: $black;
+              font-size: 3.5rem;
+              top: 7rem;
+            }
           }
           .humand-paragraph,
           .crossfit-paragraph{
