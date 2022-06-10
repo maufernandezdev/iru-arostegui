@@ -178,7 +178,7 @@ p span {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: #323232;
   height: 100vh;
   width: 100vw;
@@ -209,7 +209,7 @@ p span {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-bottom: 128px;
+  margin-top: 190px;
 }
 .menu .enlaces .social-media-container a {
   margin-right: 9.6px;
@@ -552,7 +552,7 @@ p span {
   }
 }
 .content .designs .description p {
-  height: 96px;
+  height: auto;
 }
 .content .designs .description .secondary {
   margin-bottom: 96px;
@@ -585,6 +585,9 @@ p span {
   font-feature-settings: "liga" off;
   color: #323232;
   margin-bottom: var(--margin-bottom);
+}
+.content .designs .description .website h4 a {
+  color: inherit;
 }
 .content .designs .description .website .senderos {
   height: auto;
@@ -1141,10 +1144,12 @@ p span {
     height: 200px;
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: 0px auto;
+    padding: 4rem 0rem;
   }
   .content .designs .ui-challenge .ui-challenge__content {
-    max-width: 1110px;
+    max-width: 1100px;
+    width: 1100px;
     height: 144px;
     margin: 0px auto;
     display: flex;
@@ -1286,6 +1291,7 @@ p span {
   padding: var(--padding-section);
   max-width: 400px;
   width: 100%;
+  padding: 16px 20px 0px 20px;
 }
 .content footer .container-links {
   margin-bottom: 64px;
@@ -1319,7 +1325,7 @@ p span {
   margin-bottom: 16px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .content footer .ellipses-container .ellipse {
   border: 1px solid #323232;
@@ -1332,6 +1338,7 @@ p span {
   .content footer {
     max-width: 700px;
     margin: 0px auto;
+    padding: 121px 20px 0px 20px;
   }
   .content footer .container-links {
     width: 100%;
@@ -1342,9 +1349,14 @@ p span {
     width: 540px;
     margin: 0px auto;
     margin-bottom: 100px;
+    transform: translateX(23px);
+    justify-content: center;
   }
   .content footer .ellipses-container .ellipse {
     margin-right: 40.8px;
+  }
+  .content footer .ellipses-container a {
+    margin-right: 25px;
   }
 }
 @media screen and (min-width: 1366px) {
@@ -1360,9 +1372,14 @@ p span {
     width: 540px;
     margin: 0px auto;
     margin-bottom: 100px;
+    justify-content: center;
+    transform: translateX(35px);
   }
   .content footer .ellipses-container .ellipse {
     margin-right: 40.8px;
+  }
+  .content footer .ellipses-container a {
+    margin-right: 50px;
   }
 }
 
